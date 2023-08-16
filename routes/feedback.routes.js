@@ -14,7 +14,7 @@ router.get("/feedback", async (req, res) => {
 router.post("/feedback", async (req, res) => {
     const newFeedback = req.body
     try {
-        const feedback = await feedback.create(newFeedback)
+        const feedback = await Feedback.create(newFeedback)
         res.status(201).json(feedback)
     } catch (error) {
         res.status(500).json({ message: error.message })
