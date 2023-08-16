@@ -6,6 +6,7 @@ const skillRoutes = require("./routes/skill.routes")
 const projectRoutes = require("./routes/project.routes")
 const feedbackRoutes = require("./routes/feedback.routes")
 const experienceRoutes = require("./routes/experience.routes")
+const companyRoutes = require("./routes/company.routes")
 
 const app = express()
 connectDB()
@@ -18,5 +19,6 @@ app.use("/", skillRoutes)
 app.use("/", projectRoutes)
 app.use("/", feedbackRoutes)
 app.use("/", experienceRoutes)
+app.use("/", companyRoutes)
 
 module.exports = app
