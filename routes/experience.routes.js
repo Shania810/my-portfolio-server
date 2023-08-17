@@ -4,7 +4,7 @@ const router = Router()
 
 router.get("/experience", async (req, res) => {
     try {
-        const experiences = await Experience.find()
+        const experiences = await Experience.find().populate("company skills")
         res.status(200).json(experiences)
     } catch (error) {
         res.status(500).json({ message: error.message })
