@@ -4,7 +4,7 @@ const router = Router()
 
 router.get("/feedback", async (req, res) => {
     try {
-        const feedbacks = await Feedback.find()
+        const feedbacks = await Feedback.find().populate("person")
         res.status(200).json(feedbacks)
     } catch (error) {
         res.status(500).json({ message: error.message })
