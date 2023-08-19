@@ -7,6 +7,7 @@ const projectRoutes = require("./routes/project.routes")
 const feedbackRoutes = require("./routes/feedback.routes")
 const experienceRoutes = require("./routes/experience.routes")
 const companyRoutes = require("./routes/company.routes")
+const personRoutes = require("./routes/person.routes")
 
 const app = express()
 connectDB()
@@ -20,5 +21,6 @@ app.use("/", projectRoutes)
 app.use("/", feedbackRoutes)
 app.use("/", experienceRoutes)
 app.use("/", companyRoutes)
+app.use("/", personRoutes)
 
 module.exports = app
